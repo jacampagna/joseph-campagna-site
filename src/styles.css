@@ -1,0 +1,209 @@
+.App {
+  background-color: #222;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-width: 700px;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  width: 0px;
+  margin-left: 0;
+  padding-left: 0;
+  padding-top: 75px;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  overflow-y: auto;
+
+  height: 100vh;
+  float: left;
+
+  text-align: center;
+  color: white;
+  background-color: #111;
+
+  transition: 0.5s;
+}
+.side {
+  color: white;
+  text-decoration: none;
+}
+.side:hover {
+  color: rgb(123, 159, 209);
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 800px) {
+  .sidebar {
+    width: 300px;
+  }
+}
+h1 {
+  font-size: 160%;
+  font-family: Serif;
+}
+.email {
+  font-size: 80%;
+}
+
+button {
+  background-color: Transparent;
+  border: 0px;
+}
+button:focus {
+  outline: none;
+}
+.bar {
+  width: 0px;
+  height: 0px;
+  background-color: #555;
+}
+.bar1 {
+  width: 0px;
+  height: 0px;
+}
+.toggle {
+  margin-top: 6px;
+  transition: 0.5s;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 6px;
+  float: left;
+}
+@media only screen and (min-width: 800px) {
+  .bar {
+    width: 35px;
+    height: 5px;
+  }
+  .bar1 {
+    width: 35px;
+    height: 6px;
+  }
+}
+.mainColumn {
+  transition: 0.5s;
+  margin-left: 0px;
+  width: 100%-300px;
+  background-color: #111;
+}
+@media only screen and (min-width: 800px) {
+  .mainColumn {
+    margin-left: 300px;
+  }
+}
+.introduction {
+  min-height: 550px;
+  background-size: cover;
+  background-image: url("./images/fountain.jpg");
+  height: 100vh;
+}
+.pageHeader {
+  border-bottom-style: solid;
+  border-width: 5px;
+  border-color: rgb(73, 7, 7);
+  width: auto;
+  font-size: 200%;
+  font-family: Serif;
+}
+.projectHeader {
+  font-size: 140%;
+  color: white;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: rgb(14, 7, 73);
+}
+.info {
+  text-align: left;
+  max-width: 800px;
+  font-size: 20px;
+  padding-left: 55px;
+  padding-right: 50px;
+}
+.pair {
+  background-color: white;
+  margin: 1%;
+}
+
+.fullWidth {
+  width: 98%;
+}
+.limitWidth {
+  max-width: 500px;
+}
+
+.page {
+  background-color: #222;
+}
+
+.greeting {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  float: left;
+  margin-top: 200px;
+  margin-left: 150px;
+  padding-left: 0px;
+  font-size: 250%;
+  width: 200px;
+}
+.greeting:before {
+  content: "Hi! \A I'm Joey";
+
+  white-space: pre;
+  font-size: 150%;
+  animation-name: greetingAnimation;
+  animation-delay: 4s;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+@keyframes greetingAnimation {
+  0% {
+    opacity: 1;
+  }
+  8% {
+    opacity: 0;
+  }
+  16% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 1;
+    content: "I love \A solving \A problems!";
+  }
+  37% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  58% {
+    opacity: 1;
+    content: "I built this \A website";
+  }
+  66% {
+    opacity: 0;
+  }
+  74% {
+    opacity: 1;
+  }
+  86% {
+    opacity: 1;
+    content: "Hi! \A I'm Joey";
+  }
+}
+@media only screen and (min-width: 320px) {
+  .info {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .info {
+    font-size: 20px;
+  }
+}
